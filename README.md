@@ -35,7 +35,7 @@ hatched.SP=function(x,density=0.001,angle=45,fillOddEven = FALSE){
 }
 ```
 
-So far after endless hours of searching I found the `tmap` library the easiest for producing reproducible maps in the R-environment. After importing and adjusting data as needed a basemap can be put together very easily using the `tmap` functionality. After setting your bounding box or "Area of Interest" you are off to the races specifying where the layers sit (like in ArcGIS), what color, line type, point type, etc. Below is from the r-script (link), some layers are layers twice for effect. 
+So far after endless hours of searching I found the `tmap` library the easiest for producing reproducible maps in the R-environment. After importing and adjusting data as needed a basemap can be put together very easily using the `tmap` functionality. After setting your bounding box or "Area of Interest" you are off to the races specifying where the layers sit (like in ArcGIS), what color, line type, point type, etc. Below is from the r-script ([link](https://github.com/SwampThingPaul/rstat_mapping/blob/6cb5b478149678830c7e9d5e09de66918623ce94/X_rstat_map.R)), some layers are layers twice for effect. 
 
 ```
 bbox=raster::extent(473714,587635,2748300,2960854);#Bounding box for our Area of Interest (AOI)
@@ -61,4 +61,12 @@ Once the base map is put together to your liking, then you can layer on points, 
 ```
 base.map+tm_shape(TN.GM)+tm_symbol();
 ```
-and use the `png() ... dev.off()` functions to write the plot to a file. 
+Use the `png() ... dev.off()` function to write the plot to a file. 
+
+A complete script has been posted in this repository for your convience named [X_rstat_map.r](https://github.com/SwampThingPaul/rstat_mapping/blob/6cb5b478149678830c7e9d5e09de66918623ce94/X_rstat_map.R). 
+
+__NOTE:__ All paths are relative but I do set a working directory, therefore you will need to adjust as needed for your machine. 
+
+If you run into issues or have questions feel free to drop me a [line](mailto:pjulian@ufl.edu).
+
+
