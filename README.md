@@ -24,7 +24,7 @@ library(HatchedPolygons)
 library(plyr)
 ```
 
-Unfortunatly at this time, the `tmap` library does not have a pattern filled option for polygons as discussed [here](https://github.com/mtennekes/tmap/issues/49). Therefore a workaround is needed, leveraging the functions in the `library(HatchedPolygons)` library, I developed a custom helper function to make a patterned fill. the purporse of the custom function is that the `hatched.SpatialPolygons()` function does not produce a spatial data frame with a projection, therefore I added the `proj4string()` function into the custom function.  
+Unfortunatly at this time, the `tmap` library does not have a pattern filled option for polygons as discussed [here](https://github.com/mtennekes/tmap/issues/49). Therefore a workaround is needed, leveraging the functions in the `HatchedPolygons` library, I developed a custom helper function to make a patterned fill. The motivation of the custom function is that the `hatched.SpatialPolygons()` function does not produce a spatial data frame with a projection, therefore I added the `proj4string()` function into the custom function.  
 
 ```
 hatched.SP=function(x,density=0.001,angle=45,fillOddEven = FALSE){
