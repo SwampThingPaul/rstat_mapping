@@ -130,3 +130,16 @@ base.map+tm_shape(TN.GM)+
             outer.margins=c(0.005,0.01,0.005,0.01),inner.margins = 0,between.margin=0,
             legend.text.size=1,legend.title.size=1.25)
 dev.off()
+
+#Another way to write the map to a file  is to use the tmap_save() function
+map2=base.map+tm_shape(TN.GM)+
+  tm_symbols(size=0.5,col="Geomean",breaks=c(-Inf,0.5,1,2,Inf),showNA=T,palette=cols.rmp,
+             title.col="Annual Geometric \nMean TN \nConcentration (mg/L)",
+             labels=c("\u003C 0.5","0.5 - 1.0","1.0 - 2.0", "\u003E2.0"),border.lwd=0.5,colorNA = "white")+
+  tm_compass(type="arrow",position=c("left","bottom"))+
+  tm_scale_bar(position=c("left","bottom"))+
+  tm_layout(bg.color=cols[2],fontfamily = "serif",legend.outside=T,scale=1,asp=NA,
+            outer.margins=c(0.005,0.01,0.005,0.01),inner.margins = 0,between.margin=0,
+            legend.text.size=1,legend.title.size=1.25)
+
+tmap_save(map2,"map.png",width = 6.5,height=7,units="in",dpi=200) #may have to adjust the dimensions slightly. Code added after the fact.
