@@ -38,7 +38,8 @@ print(region.map,vp=viewport(0.82,0.29,0.3,0.60,just="right"))
 
 But if you want to write the map to a file you can use `tmap_save()` function
 ```
-tmap_save(map2,"example.png",width = 6.5,height=7,units="in",dpi=200,insets_tm=region.map,insets_vp =viewport(0.94,0.21,0.3,0.60,just="right") )
+tmap_save(map2,"example.png",width = 6.5,height=7,units="in",dpi=200,
+  insets_tm=region.map,insets_vp =viewport(0.94,0.21,0.3,0.60,just="right") )
 ```
 
-
+***
