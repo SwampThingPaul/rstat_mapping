@@ -1,5 +1,6 @@
 
 # Adding inset maps
+_All info has been moved to the README.md file_
 
 Adding an inset or regional map is sometime the go-to thing, expecially for ecological studies. This helps put the study in a regional or national context and orient people to your study area. 
 
